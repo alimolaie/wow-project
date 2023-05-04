@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> صندوق ورودی </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Bootstrap 4 Landing Page Template">
+    <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health">
+    <meta name="author" content="Shreethemes">
+    <meta name="email" content="support@shreethemes.in">
+    <meta name="website" content=" ">
+    <meta name="Version" content="v1.2.0">
+    <!-- favicon -->
+
+    <!-- simplebar -->
+    <link href="{{asset('assets/css/simplebar.css')}}" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    <!-- Bootstrap -->
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link href="{{asset('assets/css/materialdesignicons.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/remixicon.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/basic.min.css" integrity="sha512-U0/VTgFxv1XpcI4ZrZNgVTV8IxOZBQDuUTRJexBY76M71M1XMV/hntGDZ1TfaAyjyGDVxh3JT5tedRSMHO8ZXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css" integrity="sha512-jU/7UFiaW5UBGODEopEqnbIAHOI8fO6T99m7Tsmqs2gkdujByJfkCbbfPSN4Wlqlb9TGnsuC0YgUgWkRBK7B9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Iconscout -->
+    {{--    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">--}}
+    <link href="{{asset('assets/css/unicons.iconscout.com/release/v3.0.6/css/line.css')}}" rel="stylesheet">
+    <!-- Css -->
+    <link href="{{asset('assets/css/style-rtl.min.css')}}" rel="stylesheet" type="text/css" id="theme-opt">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+
+    <style>
+        .tooltip-inner {
+            background-color: white;
+            color: #ffaa0f;
+            border: 1px solid;
+        }
+
+        .tooltip.bs-tooltip-auto[x-placement=top] .arrow::before,
+        .tooltip.bs-tooltip-top .arrow::before {
+            border-top-color: #ffaa0f;
+        }
+
+        .tooltip.bs-tooltip-auto[x-placement=bottom] .arrow::before,
+        .tooltip.bs-tooltip-bottom .arrow::before {
+            border-bottom-color: #ffaa0f;
+        }
+
+        .tooltip.bs-tooltip-auto[x-placement=right] .arrow::before,
+        .tooltip.bs-tooltip-right .arrow::before {
+            border-right-color: #ffaa0f;
+        }
+
+        .tooltip.bs-tooltip-auto[x-placement=left] .arrow::before,
+        .tooltip.bs-tooltip-left .arrow::before {
+            border-left-color: #ffaa0f;
+        }
+
+        .ratio-box {
+            position: relative;
+            height: 0;
+            padding-top: 100%;
+        }
+
+        .ratio-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-ratio-box {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .img-loading {
+            position: absolute;
+            top: calc(50% - 1.5rem);
+            width: 100%;
+            height: 100%;
+        }
+
+        .border.dashed {
+            border-style: dashed !important;
+        }
+
+        .border.rounded {
+            border-radius: 1.25rem !important;
+        }
+
+        .image {
+            border-width: 2px !important;
+            border-color: #dee2e6 !important;
+        }
+
+        .main-tag {
+            position: absolute;
+            opacity: 0.8;
+            left: calc(25%);
+            top: calc(75%);
+        }
+
+        .progress {
+            font-size: 1rem;
+        }
+
+        .btnupld {
+            border: 1px solid #ffaa0f;
+            color: black;
+            border-radius: 6px;
+            width: 80px;
+        }
+
+        .btnupld1 {
+            border: 1px solid #ffaa0f;
+            color: #ffaa0f;
+        }
+
+        .btnupld1:hover {
+            border: 1px solid #ffaa0f;
+            background-color: #ffaa0f;
+            color: white;
+        }
+
+        .btnupld2 {
+            background-color: #ffaa0f;
+        }
+
+        .btnupld i {
+            color: black;
+        }
+
+        .btnupld:hover {
+            background-color: #ffaa0f;
+            color: white;
+        }
+
+        .btnupld:hover i {
+            color: white;
+        }
+
+        .fupld {
+            font-size: 28px;
+            margin-right: 3px;
+        }
+
+        .fupld2 {
+            font-size: 17px;
+        }
+
+        @media(max-width:576px) {
+            .btnupld {
+                width: 65px;
+            }
+            .fupld {
+                font-size: 18px;
+            }
+            .fupld2 {
+                font-size: 13px;
+            }
+        }
+
+        @media(max-width:470px) {
+            .btnupld {
+                width: 48px;
+            }
+            .fupld {
+                font-size: 12px;
+                margin-right: 1px;
+            }
+            .fupld2 {
+                font-size: 9px;
+            }
+        }
+
+        .txtupld {
+            text-align: center !important;
+        }
+
+        .popover-header {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="page-wrapper doctris-theme toggled">
+@include('layouts.navbar')
+    <!-- Start Page Content -->
+    <main class="page-content bg-light">
+        <div class="top-header">
+            <div class="header-bar d-flex justify-content-between border-bottom">
+                <div class="d-flex align-items-center">
+                    <a href="#" class="logo-icon">
+                        <img src="{{asset('assets/images/logo-icon.png')}}" height="30" class="small" alt="">
+                        <span class="big">
+                                    <img src="{{asset('assets/images/logo-dark.png')}}" height="24" class="logo-light-mode" alt="">
+                                    <img src="{{asset('assets/images/logo-light.png')}}" height="24" class="logo-dark-mode" alt="">
+                                </span>
+                    </a>
+                    <a id="close-sidebar" class="btn btn-icon btn-pills btn-soft-primary me-2" href="#">
+                        <i class="uil uil-bars"></i>
+                    </a>
+                    <div class="search-bar p-0 d-none d-lg-block me-2">
+                        <div id="search" class="menu-search mb-0">
+                            <form role="search" method="get" id="searchform" class="searchform">
+                                <div>
+                                    <input type="text" class="form-control border rounded-pill" name="s" id="s" placeholder="جستجو کلیدواژه...">
+                                    <input type="submit" id="searchsubmit" value="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="layout-specing">
+                <div class="d-md-flex justify-content-between">
+                    <h5 class="mb-0">ایمیل</h5>
+
+                    <nav aria-label="breadcrumb" class="d-inline-block mt-4 mt-sm-0">
+                        <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="index.html">دوماس میل</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">ایمیل</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="card rounded border-0 mt-4 overflow-hidden">
+                    <div class="row g-1">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-12">
+                            <div class="card rounded-0 border-0 shadow p-4">
+                                <a href="javascript:void(0)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#compose-mail"><i class="uil uil-plus me-1"></i> ارسال </a>
+
+                                <ul class="nav nav-pills nav-link-soft nav-justified flex-column mt-4 bg-white mb-0" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded active" id="inbox-tab" data-bs-toggle="pill" href="#inbox" role="tab" aria-controls="inbox" aria-selected="false">
+                                            <div class="text-end px-3">
+                                                <span class="mb-0"><i class="uil uil-inbox h5 align-middle ms-2 mb-0"></i> ورودی</span>
+                                            </div>
+                                        </a><!--end nav link-->
+                                    </li><!--end nav item-->
+
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link rounded" id="starred-tab" data-bs-toggle="pill" href="#starred" role="tab" aria-controls="starred" aria-selected="false">
+                                            <div class="text-end px-3">
+                                                <span class="mb-0"><i class="uil uil-envelope-star h5 align-middle ms-2 mb-0"></i> مهم </span>
+                                            </div>
+                                        </a><!--end nav link-->
+                                    </li><!--end nav item-->
+
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link rounded" id="spam-tab" data-bs-toggle="pill" href="#spam" role="tab" aria-controls="spam" aria-selected="false">
+                                            <div class="text-end px-3">
+                                                <span class="mb-0"><i class="uil uil-envelope-times h5 align-middle ms-2 mb-0"></i> اسپم </span>
+                                            </div>
+                                        </a><!--end nav link-->
+                                    </li><!--end nav item-->
+
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link rounded" id="send-tab" data-bs-toggle="pill" href="{{route('list.send.email')}}" role="tab" aria-controls="sent" aria-selected="false">
+                                            <div class="text-end px-3">
+                                                <span class="mb-0"><i class="uil uil-envelope-upload h5 align-middle ms-2 mb-0"></i> ارسالی </span>
+                                            </div>
+                                        </a><!--end nav link-->
+                                    </li><!--end nav item-->
+
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link rounded" id="drafts-tab" data-bs-toggle="pill" href="#drafts" role="tab" aria-controls="drafts" aria-selected="false">
+                                            <div class="text-end px-3">
+                                                <span class="mb-0"><i class="uil uil-envelope-edit h5 align-middle ms-2 mb-0"></i> ذخیره</span>
+                                            </div>
+                                        </a><!--end nav link-->
+                                    </li><!--end nav item-->
+
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link rounded" id="delete-tab" data-bs-toggle="pill" href="#delete" role="tab" aria-controls="delete" aria-selected="false">
+                                            <div class="text-end px-3">
+                                                <span class="mb-0"><i class="uil uil-trash h5 align-middle ms-2 mb-0"></i>حذف</span>
+                                            </div>
+                                        </a><!--end nav link-->
+                                    </li><!--end nav item-->
+
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link rounded" id="notes-tab" data-bs-toggle="pill" href="#notes" role="tab" aria-controls="notes" aria-selected="false">
+                                            <div class="text-end px-3">
+                                                <span class="mb-0"><i class="uil uil-notes h5 align-middle ms-2 mb-0"></i> نوت</span>
+                                            </div>
+                                        </a><!--end nav link-->
+                                    </li><!--end nav item-->
+                                </ul><!--end nav pills-->
+                            </div>
+                        </div><!--end col-->
+
+                        <div class="col-xl-10 col-lg-9 col-md-8 col-12 mt-4 mt-sm-0">
+                            <div class="tab-content rounded-0 shadow" id="pills-tabContent">
+                                <div class="tab-pane fade bg-white show active" id="inbox" role="tabpanel" aria-labelledby="inbox-tab">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0 table-email table-center table-nowrap">
+                                            <thead>
+                                            <tr>
+                                                <th class="border-bottom py-3" style="min-width: 15px;" scope="col">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkAll">
+                                                        <label class="form-check-label fw-normal" for="checkAll"></label>
+                                                    </div>
+                                                </th>
+                                                <th class="border-bottom py-3" style="min-width: 15px;" scope="col">
+                                                    <a href="#" class="text-muted"><i class="uil uil-redo"></i></a>
+                                                </th>
+                                                <th class="border-bottom py-3" style="min-width: 150px;" scope="col"></th>
+                                                <th class="border-bottom py-3" style="min-width: 750px;" scope="col"></th>
+                                                <th class="border-bottom py-3 text-end" style="min-width: 150px;" scope="col">
+                                                    <a href="#" class="btn btn-icon btn-sm btn-pills btn-soft-light"><i class="uil uil-angle-left icons"></i></a>
+                                                    <a href="#" class="btn btn-icon btn-sm btn-pills btn-soft-light"><i class="uil uil-angle-right icons"></i></a>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($aMessages as $oMessage)
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkbox1">
+                                                        <label class="form-check-label" for="checkbox1"></label>
+                                                    </div>
+                                                </th>
+                                                <th><i class="uil uil-star text-muted"></i></th>
+                                                <td>{{$oMessage->getFrom()[0]->mail}}</td>
+                                                <td><p class="text-muted mb-0"> {{$oMessage->getSubject()}}</p></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div><!--end teb pane-->
+
+                                <div class="tab-pane fade bg-white rounded" id="starred" role="tabpanel" aria-labelledby="starred-tab">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0 table-email table-center table-nowrap">
+                                            <thead>
+                                            <tr>
+                                                <th class="border-bottom py-3" style="min-width: 15px;" scope="col">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkAll1">
+                                                        <label class="form-check-label fw-normal" for="checkAll1"></label>
+                                                    </div>
+                                                </th>
+                                                <th class="border-bottom py-3" style="min-width: 15px;" scope="col">
+                                                    <a href="#" class="text-muted"><i class="uil uil-redo"></i></a>
+                                                </th>
+                                                <th class="border-bottom py-3" style="min-width: 150px;" scope="col"></th>
+                                                <th class="border-bottom py-3" style="min-width: 750px;" scope="col"></th>
+                                                <th class="border-bottom py-3 text-end" style="min-width: 150px;" scope="col">
+                                                    <a href="#" class="btn btn-icon btn-sm btn-pills btn-soft-light"><i class="uil uil-angle-left icons"></i></a>
+                                                    <a href="#" class="btn btn-icon btn-sm btn-pills btn-soft-light"><i class="uil uil-angle-right icons"></i></a>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkbox16">
+                                                        <label class="form-check-label" for="checkbox16"></label>
+                                                    </div>
+                                                </th>
+                                                <th><i class="uil uil-star text-muted"></i></th>
+                                                <td>امی لوسر</td>
+                                                <td><p class="text-muted mb-0"> در یک ساعت آزاد ، زمانی که قدرت انتخاب ما از بین نرفته و هیچ چیز مانع توانایی انجام ما نمی شود. </p></td>
+                                                <td class="text-end"><small>17 اسفند 1400</small></td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkbox17">
+                                                        <label class="form-check-label" for="checkbox17"></label>
+                                                    </div>
+                                                </th>
+                                                <th><i class="uil uil-star text-muted"></i></th>
+                                                <td>تامیکا ویتهود</td>
+                                                <td><p class="text-muted mb-0"> بنابراین انسان دانا همیشه در رعایت این اصل انتخاب گام برمی دارد. </p></td>
+                                                <td class="text-end"><small>27 اسفند 1400</small></td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkbox18">
+                                                        <label class="form-check-label" for="checkbox18"></label>
+                                                    </div>
+                                                </th>
+                                                <th><i class="uil uil-star text-muted"></i></th>
+                                                <td>باربارا بیانس</td>
+                                                <td><p class="text-muted mb-0"> ما با صالح تقبیح می کنیم </p></td>
+                                                <td class="text-end"><small>21 اسفند 1400</small></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!--end teb pane-->
+
+                                <div class="tab-pane fade bg-white rounded p-4" id="spam" role="tabpanel" aria-labelledby="spam-tab">
+                                    <span class="text-muted">Hooray, no spam here!</span>
+                                </div><!--end teb pane-->
+
+                                <div class="tab-pane fade bg-white rounded" id="sent" role="tabpanel" aria-labelledby="send-tab">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0 table-email table-center table-nowrap">
+                                            <thead>
+                                            <tr>
+                                                <th class="border-bottom py-3" style="min-width: 15px;" scope="col">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkAll2">
+                                                        <label class="form-check-label fw-normal" for="checkAll2"></label>
+                                                    </div>
+                                                </th>
+                                                <th class="border-bottom py-3" style="min-width: 15px;" scope="col">
+                                                    <a href="#" class="text-muted"><i class="uil uil-redo"></i></a>
+                                                </th>
+                                                <th class="border-bottom py-3" style="min-width: 150px;" scope="col"></th>
+                                                <th class="border-bottom py-3" style="min-width: 750px;" scope="col"></th>
+                                                <th class="border-bottom py-3 text-end" style="min-width: 150px;" scope="col">
+                                                    <a href="#" class="btn btn-icon btn-sm btn-pills btn-soft-light"><i class="uil uil-angle-left icons"></i></a>
+                                                    <a href="#" class="btn btn-icon btn-sm btn-pills btn-soft-light"><i class="uil uil-angle-right icons"></i></a>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkbox19">
+                                                        <label class="form-check-label" for="checkbox19"></label>
+                                                    </div>
+                                                </th>
+                                                <th><i class="uil uil-star text-muted"></i></th>
+                                                <td>امی لوسر</td>
+                                                <td><p class="text-muted mb-0"> در یک ساعت آزاد ، زمانی که قدرت انتخاب ما از بین نرفته و هیچ چیز مانع توانایی انجام ما نمی شود. </p></td>
+                                                <td class="text-end"><small>17 اسفند 1400</small></td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkbox20">
+                                                        <label class="form-check-label" for="checkbox20"></label>
+                                                    </div>
+                                                </th>
+                                                <th><i class="uil uil-star text-muted"></i></th>
+                                                <td>تامیکا ویتهود</td>
+                                                <td><p class="text-muted mb-0"> بنابراین انسان دانا همیشه در رعایت این اصل انتخاب گام برمی دارد. </p></td>
+                                                <td class="text-end"><small>27 اسفند 1400</small></td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input check" type="checkbox" value="" id="checkbox21">
+                                                        <label class="form-check-label" for="checkbox21"></label>
+                                                    </div>
+                                                </th>
+                                                <th><i class="uil uil-star text-muted"></i></th>
+                                                <td>باربارا بیانس</td>
+                                                <td><p class="text-muted mb-0"> ما با صالح تقبیح می کنیم </p></td>
+                                                <td class="text-end"><small>21 اسفند 1400</small></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!--end teb pane-->
+
+                                <div class="tab-pane fade bg-white rounded p-4" id="drafts" role="tabpanel" aria-labelledby="drafts-tab">
+                                    <span class="text-muted">You don't have any saved drafts. Saving a draft allows you to keep a message you aren't ready to send yet.</span>
+                                </div><!--end teb pane-->
+
+                                <div class="tab-pane fade bg-white rounded p-4" id="delete" role="tabpanel" aria-labelledby="delete-tab">
+                                    <span class="text-muted">No conversations in Trash.</span>
+                                </div><!--end teb pane-->
+
+                                <div class="tab-pane fade bg-white rounded p-4" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+                                    <span class="text-muted">No notes in Notes</span>
+                                </div><!--end teb pane-->
+                            </div>
+                        </div>
+                    </div><!--end row-->
+                </div>
+            </div>
+        </div><!--end container-->
+        <!-- Footer Start -->
+        <footer class="bg-white shadow py-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="text-sm-start text-center">
+                            <p class="mb-0 text-muted">1402© سامانه سرویس ایمیل دوماس میل. Design By <i class="mdi mdi-heart text-danger"></i> <a href="http://ali-molaei.ir/" target="_blank" class="text-reset">Ali Molaei</a>.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <!-- End -->
+    </main>
+    <!--End page-content" -->
+</div>
+<!-- page-wrapper -->
+
+<!-- Offcanvas Start -->
+<div class="offcanvas offcanvas-end bg-white shadow" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header p-4 border-bottom">
+        <h5 id="offcanvasRightLabel" class="mb-0">
+            <img src="{{asset('assets/images/logo-dark.png')}}" height="24" class="light-version" alt="">
+            <img src="{{asset('assets/images/logo-light.png')}}" height="24" class="dark-version" alt="">
+        </h5>
+        <button type="button" class="btn-close d-flex align-items-center text-dark" data-bs-dismiss="offcanvas" aria-label="Close"><i class="uil uil-times fs-4"></i></button>
+    </div>
+    <div class="offcanvas-body p-4 px-md-5">
+        <div class="row">
+            <div class="col-12">
+                <!-- Style switcher -->
+                <div id="style-switcher">
+                    <div>
+                        <ul class="text-center list-unstyled mb-0">
+                            <li class="d-grid"><a href="javascript:void(0)" class="rtl-version t-rtl-light" onclick="setTheme('style-rtl')"><img src="{{asset('assets/images/layouts/light-dash-rtl.png')}}" class="img-fluid rounded-md shadow-md d-block" alt=""><span class="text-muted mt-2 d-block">راست چین</span></a></li>
+                            <li class="d-grid"><a href="javascript:void(0)" class="dark-rtl-version t-rtl-dark" onclick="setTheme('style-dark-rtl')"><img src="{{asset('assets/images/layouts/dark-dash-rtl.png')}}" class="img-fluid rounded-md shadow-md d-block" alt=""><span class="text-muted mt-2 d-block">راست چین</span></a></li>
+                            <li class="d-grid"><a href="javascript:void(0)" class="dark-version t-dark mt-4" onclick="setTheme('style-dark-rtl')"><img src="{{asset('assets/images/layouts/dark-dash-rtl.png')}}" class="img-fluid rounded-md shadow-md d-block" alt=""><span class="text-muted mt-2 d-block">حالت تاریک</span></a></li>
+                            <li class="d-grid"><a href="javascript:void(0)" class="light-version t-light mt-4" onclick="setTheme('style-rtl')"><img src="{{asset('assets/images/layouts/light-dash-rtl.png')}}" class="img-fluid rounded-md shadow-md d-block" alt=""><span class="text-muted mt-2 d-block">حالت روشن</span></a></li>
+                            <li class="d-grid"><a href="{{url('/')}}" target="_blank" class="mt-4"><img src="{{asset('assets/images/layouts/landing-light-rtl.png')}}" class="img-fluid rounded-md shadow-md d-block" alt=""><span class="text-muted mt-2 d-block">صفحات لندینگ</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end Style switcher -->
+            </div><!--end col-->
+        </div><!--end row-->
+    </div>
+
+    <div class="offcanvas-footer p-4 border-top text-center">
+        <ul class="list-unstyled social-icon mb-0">
+            <li class="list-inline-item mb-0"><a href="https://www.rtl-theme.com/doctris-html-template" target="_blank" class="rounded"><i class="uil uil-shopping-cart align-middle" title="خرید"></i></a></li>
+            <li class="list-inline-item mb-0"><a href=" " target="_blank" class="rounded"><i class="uil uil-dribbble align-middle" title="dribbble"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://www.rtl-theme.com/author/afaridteam/" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://www.rtl-theme.com/author/afaridteam/" target="_blank" class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://www.rtl-theme.com/author/afaridteam/" target="_blank" class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://www.rtl-theme.com/author/afaridteam/" class="rounded"><i class="uil uil-envelope align-middle" title="email"></i></a></li>
+            <li class="list-inline-item mb-0"><a href=" " target="_blank" class="rounded"><i class="uil uil-globe align-middle" title="website"></i></a></li>
+        </ul><!--end icon-->
+    </div>
+</div>
+<!-- Offcanvas End -->
+
+<!-- Compose Mail Start -->
+@include('email.compose')
+<!-- Compose Mail End -->
+
+<!-- javascript -->
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js" integrity="sha512-U2WE1ktpMTuRBPoCFDzomoIorbOyUv0sP8B+INA3EzNAhehbzED1rOJg6bCqPf/Tuposxb5ja/MAUnC8THSbLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- simplebar -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        var auctionImages = null;
+        var imagesloader = $('[data-type=imagesloader]').imagesloader({
+            maxFiles: 4,
+            minSelect: 1,
+            imagesToLoad: auctionImages
+        });
+        $frm = $('#frm');
+        $frm.submit(function(e) {
+
+            var $form = $(this);
+
+            var files = imagesloader.data('format.imagesloader').AttachmentArray;
+
+            var il = imagesloader.data('format.imagesloader');
+
+            if (il.CheckValidity())
+                alert('Upload ' + files.length + ' files');
+
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script>
+    try {
+        fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {
+            method: 'HEAD',
+            mode: 'no-cors'
+        })).then(function(response) {
+            return true;
+        }).catch(function(e) {
+            var carbonScript = document.createElement("script");
+            carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+            carbonScript.id = "_carbonads_js";
+            document.getElementById("carbon-block").appendChild(carbonScript);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+</script>
+<script type="text/javascript">
+
+    Dropzone.autoDiscover = false;
+
+    $(document).ready(function () {
+        $("#my-dropzone").dropzone({
+            maxFiles: 5000,
+            url: "/dropzone-upload/",
+            success: function (file, response) {
+                console.log(response);
+            }
+        });
+    })
+
+</script>
+<script src="{{asset('assets/js/simplebar.min.js')}}"></script>
+<script src="{{asset('dropzone/jquery.imagesloader-1.0.1.js')}}"></script>
+<!-- Icons -->
+<script src="{{asset('assets/js/feather.min.js')}}"></script>
+<!-- CK editor -->
+<script src="{{asset('assets/js/feather.min.js')}}"></script>
+<!-- Main Js -->
+<script src="{{asset('assets/js/app.js')}}"></script>
+<script src="{{asset('js/tinymce.min.js')}}"></script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: 'textarea.tinymce-editor',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount', 'image'
+        ],
+        toolbar: 'undo redo | formatselect | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+        content_css: '//www.tiny.cloud/css/codepen.min.css'
+    });
+</script>
+</body>
+
+</html>
