@@ -28,5 +28,10 @@ Route::get('/logout-user',function (){
 })->name('logout.user');
 //user
 Route::resource('/user', 'UserController');
+Route::resource('/realm', 'RelamController');
+Route::resource('/player', 'PlayerController');
 Route::post('/user-login', 'UserController@loginAction')->name('user.login');
+Route::get('/gold-calculator',function (){
+    return view('gold.gold-calculator');
+});
 

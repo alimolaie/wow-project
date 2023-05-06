@@ -13,7 +13,7 @@
     <meta name="website" content=" ">
     <meta name="Version" content="v1.2.0">
     <!-- favicon -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{asset('img/wixana.png')}}">
     <!-- Bootstrap -->
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <!-- Icons -->
@@ -49,10 +49,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-8">
-                <img src="{{asset('assets/images/logo-dark.png')}}" height="24" class="mx-auto d-block" alt="">
+                <img src="{{asset('img/wixana.png')}}" height="80" class="mx-auto d-block" alt="">
                 <div class="card login-page bg-white shadow mt-4 rounded border-0">
                     <div class="card-body">
-                        <h4 class="text-center">ورود</h4>
+                        <h4 class="text-center">ثبت نام</h4>
                         <form action="{{ route('user.store') }}" class="login-form mt-4" method="post">
                             @csrf
                             <div class="row">
