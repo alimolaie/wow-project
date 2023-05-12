@@ -4,12 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Player;
 use App\Relam;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
+use App\Lib\Helper;
+use Illuminate\Support\Facades\Auth;
 class PlayerController extends Controller
 {
+    public function dashboard()
+    {
+        return view('player_panel.dashboard');
+    }
+    public function registerForm()
+    {
+        $relams=Relam::all();
+        return view('web.register-player',compact('relams'));
+    }
+    public function registerAction(Request $request)
+    {
+        $data=array();
+        $data['player_name']=$request->input('player_name');
+        $data['user_name']=$request->input('user_name');
+        $data['password']=bcrypt($request->input('password'));
+        $data['relam_id']=$request->input('relam_id');
+        $data['discord_id']=$request->input('discord_id');
+        $data['created_at']=Carbon::now();
+        $player=Player::create($data);
+        Auth::guard('player')->login($player);
+        toastr()->success('ثبت نام با موفقیت انجام شد');
+        return redirect()->route('player.dashboard');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -106,5 +131,18 @@ class PlayerController extends Controller
         DB::table('players')->where('id',$id)->delete();
         toastr()->success('حذف با موفقیت انجام شد');
         return back();
+    }
+    public function loginAction(Request $request)
+    {
+        $request->replace(Helper::convertToEnNumberInputs($request->all(), ['user_name','password']));
+
+        if(Auth::guard('player')->attempt($request->only('user_name','password'),$request->filled('remember'))){
+            //Authentication passed...
+            return redirect()
+                ->intended(route('test.auth.player'));
+        }
+
+        toastr()->error('نام کاربری یا رمز عبور اشتباه است');
+        return redirect()->back();
     }
 }

@@ -3,8 +3,12 @@
 <html lang="en">
 
 <head>
+    @php
+        $players=\App\Player::all();
+        $relams=\App\Relam::all();
+    @endphp
     <meta charset="utf-8">
-    <title> ویکسانا-داشبرد</title>
+    <title> ویکسانا-داشبرد مدیریت </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template">
     <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health">
@@ -13,155 +17,33 @@
     <meta name="website" content=" ">
     <meta name="Version" content="v1.2.0">
     <!-- favicon -->
-    <link rel="shortcut icon" href="{{asset('img/wixana.png')}}">
-    <!-- Bootstrap -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+
     <!-- simplebar -->
     <link href="{{asset('assets/css/simplebar.css')}}" rel="stylesheet" type="text/css">
-    <!-- Select2 -->
-    <link href="{{asset('assets/css/select2.min.css')}}" rel="stylesheet">
+    <!-- Icons -->
+
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    <!-- Bootstrap -->
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <!-- Icons -->
     <link href="{{asset('assets/css/materialdesignicons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/css/remixicon.css')}}" rel="stylesheet" type="text/css">
 
-    <!-- SLIDER -->
-    <link href="../assets/css/tiny-slider.css" rel="stylesheet">
     <!-- Iconscout -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link href="../assets/css/unicons.iconscout.com/release/v3.0.6/css/line.css" rel="stylesheet">
+    {{--    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">--}}
+    <link href="{{asset('assets/css/unicons.iconscout.com/release/v3.0.6/css/line.css')}}" rel="stylesheet">
     <!-- Css -->
-    <link href="../assets/css/style-rtl.min.css" rel="stylesheet" type="text/css" id="theme-opt">
+    <link href="{{asset('assets/css/style-rtl.min.css')}}" rel="stylesheet" type="text/css" id="theme-opt">
 
 </head>
 
 <body>
-<!-- Loader -->
-<div id="preloader">
-    <div id="status">
-        <div class="spinner">
-            <div class="double-bounce1"></div>
-            <div class="double-bounce2"></div>
-        </div>
-    </div>
-</div>
-<!-- Loader -->
+
 
 <div class="page-wrapper doctris-theme toggled">
-    <nav id="sidebar" class="sidebar-wrapper">
-        <div class="sidebar-content" data-simplebar="" style="height: calc(100% - 60px);">
-            <div class="sidebar-brand">
-                <a href="index.html">
-                    <img src="../assets/images/logo-dark.png" height="24" class="logo-light-mode" alt="">
-                    <img src="../assets/images/logo-light.png" height="24" class="logo-dark-mode" alt="">
-                </a>
-            </div>
-
-            <ul class="sidebar-menu pt-3">
-                <li><a href="index.html"><i class="uil uil-dashboard ms-2 d-inline-block"></i>داشبرد</a></li>
-                <li><a href="appointment.html"><i class="uil uil-stethoscope ms-2 d-inline-block"></i>نوبت دهی</a></li>
-
-                <li class="sidebar-dropdown">
-                    <a href="javascript:void(0)"><i class="uil uil-user ms-2 d-inline-block"></i>پزشکان</a>
-                    <div class="sidebar-submenu">
-                        <ul>
-                            <li><a href="doctors.html">پزشکان</a></li>
-                            <li><a href="add-doctor.html">افزودن پزشک</a></li>
-                            <li><a href="dr-profile.html">پروفایل</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="sidebar-dropdown">
-                    <a href="javascript:void(0)"><i class="uil uil-wheelchair ms-2 d-inline-block"></i>بیماران</a>
-                    <div class="sidebar-submenu">
-                        <ul>
-                            <li><a href="patients.html">بیماران</a></li>
-                            <li><a href="add-patient.html">افزودن بیمار</a></li>
-                            <li><a href="patient-profile.html">پروفایل</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="sidebar-dropdown">
-                    <a href="javascript:void(0)"><i class="uil uil-apps ms-2 d-inline-block"></i>برنامه‌ها</a>
-                    <div class="sidebar-submenu">
-                        <ul>
-                            <li><a href="chat.html">چت</a></li>
-                            <li><a href="email.html">ایمیل</a></li>
-                            <li><a href="calendar.html">تقویم</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="sidebar-dropdown">
-                    <a href="javascript:void(0)"><i class="uil uil-shopping-cart ms-2 d-inline-block"></i>داروخانه</a>
-                    <div class="sidebar-submenu">
-                        <ul>
-                            <li><a href="shop.html">فروشگاه</a></li>
-                            <li><a href="product-detail.html">جزییات محصول</a></li>
-                            <li><a href="shopcart.html">سبد خرید</a></li>
-                            <li><a href="checkout.html">ادامه خرید</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="sidebar-dropdown">
-                    <a href="javascript:void(0)"><i class="uil uil-flip-h ms-2 d-inline-block"></i>بلاگ</a>
-                    <div class="sidebar-submenu">
-                        <ul>
-                            <li><a href="blogs.html">بلاگ</a></li>
-                            <li><a href="blog-detail.html">جزییات بلاگ</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="sidebar-dropdown">
-                    <a href="javascript:void(0)"><i class="uil uil-file ms-2 d-inline-block"></i>صفحات</a>
-                    <div class="sidebar-submenu">
-                        <ul>
-                            <li><a href="faqs.html">سوالات متدوال</a></li>
-                            <li><a href="review.html">نظرات</a></li>
-                            <li><a href="invoice-list.html">لیست فاکتور</a></li>
-                            <li><a href="invoice.html">فاکتور</a></li>
-                            <li><a href="terms.html">مقررات و سیاست‌ها</a></li>
-                            <li><a href="privacy.html">حفظ حریم شخصی</a></li>
-                            <li><a href="error.html">404 !</a></li>
-                            <li><a href="blank-page.html">صفحه خالی</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="sidebar-dropdown">
-                    <a href="javascript:void(0)"><i class="uil uil-sign-in-alt ms-2 d-inline-block"></i>احراز هویت</a>
-                    <div class="sidebar-submenu">
-                        <ul>
-                            <li><a href="login.html">ورود</a></li>
-                            <li><a href="signup.html">ثبت نام</a></li>
-                            <li><a href="forgot-password.html">فراموشی رمزعبور</a></li>
-                            <li><a href="lock-screen.html">قفل صفحه</a></li>
-                            <li><a href="thankyou.html">ممنونیم..</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li><a href="components.html"><i class="uil uil-cube ms-2 d-inline-block"></i>کامپوننت‌ها</a></li>
-
-                <li><a href="../landing/index-two.html" target="_blank"><i class="uil uil-window ms-2 d-inline-block"></i>لندینگ پیچ</a></li>
-            </ul>
-            <!-- sidebar-menu  -->
-        </div>
-        <!-- sidebar-content  -->
-        <ul class="sidebar-footer list-unstyled mb-0">
-            <li class="list-inline-item mb-0 me-1">
-                <a href="#" class="btn btn-icon btn-pills btn-soft-primary">
-                    <i class="uil uil-comment icons"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    @include('layouts.navbar')
     <!-- sidebar-wrapper  -->
 
-    <!-- Start Page Content -->
     <main class="page-content bg-light">
         <div class="top-header">
             <div class="header-bar d-flex justify-content-between border-bottom">
@@ -856,20 +738,9 @@
         </div><!--end container-->
 
         <!-- Footer Start -->
-        <footer class="bg-white shadow py-3">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <div class="text-sm-start text-center">
-                            <p class="mb-0 text-muted"> © داکتریس - ارائه <i class="mdi mdi-heart text-danger"></i> از <a href="" target="_blank" class="text-reset">آفرید تیم<p>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </footer><!--end footer-->
+        @include('footer-admin')
         <!-- End -->
     </main>
-    <!--End page-content" -->
 </div>
 <!-- page-wrapper -->
 

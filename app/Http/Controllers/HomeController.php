@@ -24,10 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $oClient = Client::account('default');
-        $oClient->connect();
-        $oFolder = $oClient->getFolder('Inbox');
-       $aMessages = $oFolder->query()->all()->get();
-        return view('home',compact('aMessages'));
+        return view('home');
     }
 }

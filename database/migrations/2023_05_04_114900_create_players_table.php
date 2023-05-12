@@ -19,6 +19,7 @@ class CreatePlayersTable extends Migration
             $table->string('user_name');
             $table->string('password');
             $table->bigInteger('relam_id')->unsigned()->index()->nullable();
+            $table->string('discord_id')->nullable();
             $table->foreign('relam_id')->references('id')->on('relams')->onDelete('cascade');
             $table->boolean('is_admin')->default(0);
             $table->timestamps();

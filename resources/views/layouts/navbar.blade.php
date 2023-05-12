@@ -28,7 +28,17 @@
                     </ul>
                 </div>
             </li>
-{{--            <li class="sidebar-dropdown">--}}
+            <li class="sidebar-dropdown">
+                <a href="javascript:void(0)"><i class="uil uil-coins ms-2 d-inline-block" style="color: goldenrod"></i>گلد</a>
+                <div class="sidebar-submenu">
+                    <ul>
+                        <li><a href="{{url('gold-calculator')}}">محاسبه کننده گلد</a></li>
+                        <li><a href="{{route('player.create')}}">افزودن پلیر</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            {{--            <li class="sidebar-dropdown">--}}
 {{--                <a href="javascript:void(0)"><i class="uil uil-user ms-2 d-inline-block"></i>پزشکان</a>--}}
 {{--                <div class="sidebar-submenu">--}}
 {{--                    <ul>--}}
@@ -39,7 +49,7 @@
 {{--                </div>--}}
 {{--            </li>--}}
 
-            <li><a href="{{route('logout.user')}}" target="_blank"><i class="uil uil-sign-out-alt ms-2 d-inline-block"></i>خروج</a></li>
+            <li><a href="{{route('logout.user')}}"><i class="uil uil-sign-out-alt ms-2 d-inline-block"></i>خروج</a></li>
         </ul>
         <!-- sidebar-menu  -->
     </div>
