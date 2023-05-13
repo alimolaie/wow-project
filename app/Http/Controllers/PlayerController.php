@@ -139,7 +139,7 @@ class PlayerController extends Controller
         if(Auth::guard('player')->attempt($request->only('user_name','password'),$request->filled('remember'))){
             //Authentication passed...
             return redirect()
-                ->intended(route('test.auth.player'));
+                ->intended(route('player.dashboard'));
         }
 
         toastr()->error('نام کاربری یا رمز عبور اشتباه است');

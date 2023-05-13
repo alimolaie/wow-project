@@ -4,37 +4,36 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>صفحه اصلی 1 | جادوگر</title>
+    <title>صفحه اصلی  | ویکسانا</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/wixana.png')}}">
 
     <!-- all css here -->
 
-    <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('web/css/bootstrap.min.css')}}">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="{{asset('web/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('web/css/owl.transitions.css')}}">
     <!-- meanmenu css -->
-    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="{{asset('web/css/meanmenu.min.css')}}">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/icon.css">
-    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="{{asset('web/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('web/css/icon.css')}}">
+    <link rel="stylesheet" href="{{asset('web/css/flaticon.css')}}">
     <!-- magnific css -->
-    <link rel="stylesheet" href="css/magnific.min.css">
+    <link rel="stylesheet" href="{{asset('web/css/magnific.min.css')}}">
     <!-- venobox css -->
-    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="{{asset('web/css/venobox.css')}}">
     <!-- style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{asset('web/css/responsive.css')}}">
 
     <!-- modernizr css -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{{asset('web/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
 <body>
 
@@ -43,134 +42,15 @@
 <![endif]-->
 
 <div id="preloader"></div>
-<header class="header-one">
-    <!-- header-area start -->
-    <div id="sticker" class="header-area hidden-xs">
-        <div class="container">
-            <div class="row">
-                <!-- logo start -->
-                <div class="col-md-3 col-sm-3">
-                    <div class="logo">
-                        <!-- Brand -->
-                        <a class="navbar-brand page-scroll sticky-logo" href="index-2.html">
-                            <img src="img/logo/logo2.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <!-- logo end -->
-                <div class="col-md-9 col-sm-9">
-                    <div class="header-right-link">
-                        <!-- search option start -->
-                        <form action="#">
-                            <div class="search-option">
-                                <input type="text" placeholder="جستجو...">
-                                <button class="button" type="submit"><i class="fa fa-search"></i></button>
-                            </div>
-                            <a class="main-search" href="#"><i class="fa fa-search"></i></a>
-                        </form>
-                        <!-- search option end -->
-                    </div>
-                    <!-- mainmenu start -->
-                    <nav class="navbar navbar-default">
-                        <div class="collapse navbar-collapse" id="navbar-example">
-                            <div class="main-menu">
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="index-2.html">خانه</a></li>
-                                    <li><a class="pagess" href="#">صفحات</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="about.html">درباره ما</a></li>
-                                            <li><a href="team.html">تیم</a></li>
-                                            <li><a href="faq.html">سوالات متداول</a></li>
-                                            <li><a href="error.html">ارور</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="pagess" href="#">بازی ها</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="games.html">همه بازی ها</a></li>
-                                            <li><a href="single-game.html">جزئیات بازی</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="pagess" href="#">گالری</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="gallery-3.html">پروژه 3 ستونه</a></li>
-                                            <li><a href="gallery-4.html">پروژه 4 ستونه</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="pagess" href="#">وبلاگ</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">وبلاگ گرید</a></li>
-                                            <li><a href="blog-sidebar.html">نوار کناری وبلاگ</a></li>
-                                            <li><a href="blog-details.html">جزئیات وبلاگ</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">تماس</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                    <!-- mainmenu end -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- header-area end -->
-    <!-- mobile-menu-area start -->
-    <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mobile-menu">
-                        <div class="logo">
-                            <a href="index-2.html"><img src="img/logo/logo2.png" alt="" /></a>
-                        </div>
-                        <nav id="dropdown">
-                            <ul>
-                                <li><a href="index-2.html">خانه</a></li>
-                                <li><a class="pagess" href="#">صفحات</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about.html">درباره ما</a></li>
-                                        <li><a href="team.html">تیم</a></li>
-                                        <li><a href="faq.html">سوالات متداول</a></li>
-                                        <li><a href="error.html">ارور</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="pagess" href="#">بازی ها</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="games.html">همه بازی ها</a></li>
-                                        <li><a href="single-game.html">جزئیات بازی</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="pagess" href="#">گالری</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="gallery-3.html">پروژه 3 ستونه</a></li>
-                                        <li><a href="gallery-4.html">پروژه 4 ستونه</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="pagess" href="#">وبلاگ</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">وبلاگ گرید</a></li>
-                                        <li><a href="blog-sidebar.html">نوار کناری وبلاگ</a></li>
-                                        <li><a href="blog-details.html">جزئیات وبلاگ</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">تماس</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- mobile-menu-area end -->
-</header>
 <!-- header end -->
+@include('web.header')
 <!-- Start Slider Area -->
 <div class="intro-area">
     <div class="main-overly"></div>
     <div class="intro-carousel">
         <div class="intro-content">
             <div class="slider-images">
-                <img src="img/slider/s1.jpg" alt="">
+                <img src="{{asset('web/img/slider/s1.jpg')}}" alt="">
             </div>
             <div class="slider-content">
                 <div class="container">
@@ -194,7 +74,7 @@
         </div>
         <div class="intro-content">
             <div class="slider-images">
-                <img src="img/slider/s2.jpg" alt="">
+                <img src="{{asset('web/img/slider/s2.jpg')}}" alt="">
             </div>
             <div class="slider-content">
                 <div class="container">
@@ -228,9 +108,9 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="single-services text-center">
                         <div class="services-img">
-                            <img src="img/feature/1.jpg" alt="">
+                            <img src="{{asset('web/img/feature/1.jpg')}}" alt="">
                             <div class="image-layer">
-                                <img src="img/icon/g1.png" alt="icon Image">
+                                <img src="{{asset('web/img/icon/g1.png')}}" alt="icon Image">
                             </div>
                         </div>
                         <div class="main-services">
@@ -246,9 +126,9 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="single-services text-center">
                         <div class="services-img">
-                            <img src="img/feature/2.jpg" alt="">
+                            <img src="{{asset('web/img/feature/2.jpg')}}" alt="">
                             <div class="image-layer">
-                                <img src="img/icon/g2.png" alt="icon Image">
+                                <img src="{{asset('web/img/icon/g2.png')}}" alt="icon Image">
                             </div>
                         </div>
                         <div class="main-services">
@@ -264,9 +144,9 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="single-services text-center">
                         <div class="services-img">
-                            <img src="img/feature/3.jpg" alt="">
+                            <img src="{{asset('web/img/feature/3.jpg')}}" alt="">
                             <div class="image-layer">
-                                <img src="img/icon/g3.png" alt="icon Image">
+                                <img src="{{asset('web/img/icon/g3.png')}}" alt="icon Image">
                             </div>
                         </div>
                         <div class="main-services">
@@ -282,9 +162,9 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="single-services text-center">
                         <div class="services-img">
-                            <img src="img/feature/4.jpg" alt="">
+                            <img src="{{asset('web/img/feature/4.jpg')}}" alt="">
                             <div class="image-layer">
-                                <img src="img/icon/g4.png" alt="icon Image">
+                                <img src="{{asset('web/img/icon/g4.png')}}" alt="icon Image">
                             </div>
                         </div>
                         <div class="main-services">
@@ -296,43 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- single-well end-->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="single-services text-center">
-                        <div class="services-img">
-                            <img src="img/feature/5.jpg" alt="">
-                            <div class="image-layer">
-                                <img src="img/icon/g5.png" alt="icon Image">
-                            </div>
-                        </div>
-                        <div class="main-services">
-                            <div class="service-content">
-                                <h4>جهان اژدها</h4>
-                                <p>به زودی 4 فوریه 2019</p>
-                                <a class="service-btn" href="#">بیشتر بدانید</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single-well end-->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="single-services text-center">
-                        <div class="services-img">
-                            <img src="img/feature/6.jpg" alt="">
-                            <div class="image-layer">
-                                <img src="img/icon/g6.png" alt="icon Image">
-                            </div>
-                        </div>
-                        <div class="main-services">
-                            <div class="service-content">
-                                <h4>انیمیشن عجیب و غریب</h4>
-                                <p>به زودی 4 فوریه 2019</p>
-                                <a class="service-btn" href="#">بیشتر بدانید</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single-well end-->
+
             </div>
         </div>
     </div>
@@ -1005,130 +849,32 @@
 </div>
 <!--End of Blog Area-->
 <!-- Start Footer bottom Area -->
-<footer>
-    <div class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-5 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>اطلاعات</h4>
-                            <div class="footer-contacts">
-                                <p><span>تلفن :</span> +1907-543478944</p>
-                                <p><span>ایمیل :</span> info@cavalier43.com</p>
-                                <p><span>موقعیت :</span> منزل-30/2,  تهران</p>
-                            </div>
-                            <div class="footer-icons">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-google"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-4 col-sm-3 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>مسابقات بازی</h4>
-                            <div class="footer-services-link">
-                                <ul class="footer-list">
-                                    <li><a href="#">جنگ اژدها</a></li>
-                                    <li><a href="#">انیمیشن غریبه</a></li>
-                                    <li><a href="#">چالش اسکای فال</a></li>
-                                    <li><a href="#">مبارزه ریپل</a></li>
-                                    <li><a href="#">آلومورود دیوید</a></li>
-                                    <li><a href="#">کاربر وردپرس</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>اشتراک</h4>
-                            <p>
-                                آیا شما به دنبال بازی های حرفه ای برای بازی های جدید خود هستید. شما برای بازی های جدید خود به دنبال توسعه حرفه ای هستید.
-                            </p>
-                            <div class="subs-feilds">
-                                <div class="suscribe-input">
-                                    <input type="email" class="email form-control width-80" id="sus_email" placeholder="تایپ ایمیل">
-                                    <button type="submit" id="sus_submit" class="add-btn">اشتراک</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-            </div>
-        </div>
-    </div>
-    <!-- End footer area -->
-    <div class="footer-area-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="copyright">
-                        <p>
-                            کپی رایت © 2018
-                            <a href="#">جادوگر</a> همه حقوق محفوظ است
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+@include('web.footer')
 <!-- all js here -->
 
+
 <!-- jquery latest version -->
-<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="{{asset('web/js/vendor/jquery-1.12.4.min.js')}}"></script>
 <!-- bootstrap js -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{asset('web/js/bootstrap.min.js')}}"></script>
+<!-- Google Map js -->
+<script src="{{asset('web/js/mapcode.js')}}"></script>
 <!-- owl.carousel js -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="{{asset('web/js/owl.carousel.min.js')}}"></script>
 <!-- isotope js -->
-<script src="js/isotope.pkgd.min.js"></script>
+<script src="{{asset('web/js/isotope.pkgd.min.js')}}"></script>
 <!-- magnific js -->
-<script src="js/magnific.min.js"></script>
+<script src="{{asset('web/js/magnific.min.js')}}"></script>
 <!-- venobox js -->
-<script src="js/venobox.min.js"></script>
+<script src="{{asset('web/js/venobox.min.js')}}"></script>
 <!-- meanmenu js -->
-<script src="js/jquery.meanmenu.js"></script>
+<script src="{{asset('web/js/jquery.meanmenu.js')}}"></script>
 <!-- Form validator js -->
-<script src="js/form-validator.min.js"></script>
+<script src="{{asset('web/js/form-validator.min.js')}}"></script>
 <!-- plugins js -->
-<script src="js/plugins.js"></script>
+<script src="{{asset('web/js/plugins.js')}}"></script>
 <!-- main js -->
-<script src="js/main.js"></script>
+<script src="{{asset('web/js/main.js')}}"></script>
 </body>
 
 </html>

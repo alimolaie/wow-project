@@ -164,6 +164,7 @@
     <!-- mobile-menu-area end -->
 </header>
 <!-- header end -->
+@include('web.header')
 <!-- Start breadcumb Area -->
 <div class="page-area">
     <div class="breadcumb-overlay" style="background-image: url('web/img/about/b.jpg')"></div>
@@ -197,23 +198,28 @@
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="contact-form">
                     <div class="row">
-                        <form id="contactForm" method="POST" action="{{route('player.login')}}" class="contact-form">
+                        <form method="POST" action="{{route('player.login')}}">
                         @csrf
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="text" id="msg_subject" class="form-control" placeholder="موضوع" required data-error="لطفا موضوع پیام خود را وارد کنید">
+                                <input type="text" id="msg_subject" class="form-control" placeholder="نام کاربری" required>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="text" id="msg_subject" class="form-control" placeholder="موضوع" required data-error="لطفا موضوع پیام خود را وارد کنید">
+                                <input type="text" id="msg_subject" class="form-control" placeholder="رمز عبور" required>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                                <button type="submit" id="submit" class="add-btn contact-btn">ارسال پیام</button>
+                                <button type="submit" id="submit" class="add-btn contact-btn">ورود</button>
                                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                                 <div class="clearfix"></div>
                             </div>
                         </form>
+
+
                     </div>
+                    <br>
+                    <h4>یا</h4>
+                    <a href="https://discord.com/oauth2/authorize?response_type=code&client_id=157730590492196864&scope=identify%20guilds.join&state=15773059ghq9183habn&redirect_uri=https%3A%2F%2Fnicememe.website&prompt=consent"><img src="{{asset('img/aaaa.jpg')}}" width="200" height="200"></a>
                 </div>
             </div>
             <!-- End contact Form -->
@@ -222,107 +228,7 @@
 </div>
 <!-- End Contact Area -->
 <!-- Start Footer bottom Area -->
-<footer>
-    <div class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-5 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>اطلاعات</h4>
-                            <div class="footer-contacts">
-                                <p><span>تلفن :</span> +1907-543478944</p>
-                                <p><span>ایمیل :</span> info@cavalier43.com</p>
-                                <p><span>موقعیت :</span> منزل-30/2,  تهران</p>
-                            </div>
-                            <div class="footer-icons">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-google"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-4 col-sm-3 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>مسابقات بازی</h4>
-                            <div class="footer-services-link">
-                                <ul class="footer-list">
-                                    <li><a href="#">جنگ اژدها</a></li>
-                                    <li><a href="#">انیمیشن غریبه</a></li>
-                                    <li><a href="#">چالش اسکای فال</a></li>
-                                    <li><a href="#">مبارزه ریپل</a></li>
-                                    <li><a href="#">آلومورود دیوید</a></li>
-                                    <li><a href="#">کاربر وردپرس</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>اشتراک</h4>
-                            <p>
-                                آیا شما به دنبال بازی های حرفه ای برای بازی های جدید خود هستید. شما برای بازی های جدید خود به دنبال توسعه حرفه ای هستید.
-                            </p>
-                            <div class="subs-feilds">
-                                <div class="suscribe-input">
-                                    <input type="email" class="email form-control width-80" id="sus_email" placeholder="تایپ ایمیل">
-                                    <button type="submit" id="sus_submit" class="add-btn">اشتراک</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-            </div>
-        </div>
-    </div>
-    <!-- End footer area -->
-    <div class="footer-area-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="copyright">
-                        <p>
-                            کپی رایت © 2018
-                            <a href="#">جادوگر</a> همه حقوق محفوظ است
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+@include('web.footer')
 
 <!-- all js here -->
 

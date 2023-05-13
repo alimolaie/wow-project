@@ -33,7 +33,7 @@
                 <div class="sidebar-submenu">
                     <ul>
                         <li><a href="{{url('gold-calculator')}}">محاسبه کننده گلد</a></li>
-                        <li><a href="{{route('player.create')}}">افزودن پلیر</a></li>
+                        <li><a href="{{route('player.create')}}">لیست محاسبات</a></li>
                     </ul>
                 </div>
             </li>

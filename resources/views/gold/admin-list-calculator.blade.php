@@ -3,11 +3,11 @@
 
 <head>
     @php
-    $players=\App\Player::all();
-    $relams=\App\Relam::all();
-        @endphp
+        $players=\App\Player::all();
+        $relams=\App\Relam::all();
+    @endphp
     <meta charset="utf-8">
-    <title> ویکسانا-محاسبه کننده گلد </title>
+    <title> ویکسانا-لیست محاسبات </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template">
     <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health">
@@ -85,66 +85,55 @@
                 </div>
 
                 <div class="col-11 mt-4">
-
-                    <form action="{{url('gold-save')}}" method="post">
-                        @csrf
-                        <div class="card-deck">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">مشخصات پلیر ها</h5>
-                                    <br>
-
-                                    <div class="input-group" id="dynamic_field">
-                                        <select class="form-select" aria-label="Default select example" name="player_id[]">
-                                            @foreach($players as $p)
-                                                <option>{{$p->player_name}}</option>
-                                            @endforeach
-                                        </select>
-                                        <INPUT class="form-control-sm" type="text" placeholder="ضریب" name="coefficient[]">
-                                        <button class="btn btn-success" type="button" id="add">+</button>
-                                    </div>
-                                    <BR>
-
-                                </div>
-                                <div class="card-footer">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="درصد fee" name="percent_fee">
-                                        <span style="margin-left: 10px"></span>
-                                        <input type="text" class="form-control" placeholder="درصد gold collector" name="percent_gold_collector">
-
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">محاسبات پلیر ها</h5>
                             <br>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">مشخصات ریلم ها</h5>
-                                    <br>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                                    <div class="input-group" id="dynamic_field1">
-                                        <select class="form-select" name="relam_id[]">
-                                            @foreach($relams as $r)
-                                                <option>{{$r->relam_name}}</option>
-                                            @endforeach
-                                        </select>
-                                        <INPUT class="form-control-sm" type="text" placeholder="مقدار گلد" name="gold_count[]">
-                                        <button class="btn btn-success" type="button" id="add1">+</button>
-                                    </div>
-                                    <BR>
 
-                                </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="درصد fee" name="percent_fee">
+                                <span style="margin-left: 10px"></span>
+                                <input type="text" class="form-control" placeholder="درصد gold collector" name="percent_gold_collector">
+
                             </div>
+                        </div>
+                    </div>
 
-                        <br>
-
-                        <button type="submit" class="btn btn-primary">ثبت</button>
-                    </form>
-                </div>
-
-            </div>
         </div><!--end container-->
         <!-- Footer Start -->
-@include('footer-admin')
+        @include('footer-admin')
         <!-- End -->
     </main>
     <!--End page-content" -->

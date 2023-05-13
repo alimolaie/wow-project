@@ -14,7 +14,8 @@ class GoldController extends Controller
      */
     public function index()
     {
-        //
+        $gold=Gold::with("player","relam")->paginate(15);
+
     }
 
     /**
@@ -35,7 +36,32 @@ class GoldController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $player=[];
+        $coefficient=[];
+        $relam=[];
+        $goldCount=[];
+        foreach ($request->player_id as $player_id){
+            $player=$player_id;
+        }
+        foreach ($request->coefficient as $coefficient_id){
+            $coefficient=$coefficient_id;
+        }
+        foreach ($request->relam_id as $relam_id){
+            $relam=$relam_id;
+        }
+        foreach ($request->gold_count as $gold_count){
+            $goldCount=$gold_count;
+        }
+        $gold=new Gold();
+        $gold->percent_fee=$request->percent_fee;
+        $gold->percent_gold_collector=$request->percent_gold_collector;
+        $gold->player_id=implode(",",$player);
+        $gold->coefficient=implode(",",$coefficient);
+        $gold->relam_id=implode(",",$relam);
+        $gold->gold_count=implode(",",$goldCount);
+        $gold->save();
+        toastr()->success('داده ها باا موفقیت ثبت شد');
+        return redirect()->back();
     }
 
     /**

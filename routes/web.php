@@ -11,9 +11,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WebController@index')->name('home.page');
+
 Route::get('/register-player', 'PlayerController@registerForm')->name('register.player');
 Route::get('player/dashboard', 'PlayerController@dashboard')->name('player.dashboard');
 
@@ -49,4 +48,5 @@ Route::post('/player-login', 'PlayerController@loginAction')->name('player.login
 Route::get('/gold-calculator',function (){
     return view('gold.gold-calculator');
 });
+Route::post('/gold-save', 'GoldController@store');
 
